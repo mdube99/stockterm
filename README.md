@@ -1,2 +1,1 @@
-# stockterm
-Get stock price from terminal, along with stock history
+# Stock Terminal - get stock information from the terminal
