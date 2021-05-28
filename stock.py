@@ -8,6 +8,7 @@ class Stock():
     current_price = 0
     daily_high = 0
     daily_low = 0
+    previous_close = 0
     json = ""
     symbol = "BLANK"
 
@@ -22,3 +23,4 @@ class Stock():
         self.current_price = response["c"]
         self.daily_high = response["h"]
         self.daily_low = response["l"]
+        self.previous_close = response["pc"]
