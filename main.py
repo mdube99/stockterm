@@ -19,14 +19,17 @@ def printStock(uinput, stockpicked):
 
 def main():
     uinput = str(input("What stock(s) would you like information for: "))
+    # Checks to see if there are multiple stocks
     if comma in uinput:
         uinput = uinput.upper()
         multi_stock = uinput.split(",")
         for x in range(len(multi_stock)):
+            # runs each stock in the list through a loop printing them
             stockpicked = Stock(multi_stock[x])
             stockpicked.update_stock()
             printStock(multi_stock[x], stockpicked)
     else:
+    # If there aren't multiple stocks
         uinput = uinput.upper()
         stockpicked = Stock(uinput)
         stockpicked.update_stock()
